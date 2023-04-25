@@ -1,6 +1,12 @@
+import Hero from './hero'
+
+
 const HomeView = () => {
   return (
-    <h1>Hello, from React 201!</h1>
+    <>
+      <Hero />
+      <h1>Hello, from React 201!</h1>
+    </>
   )
 }
 
