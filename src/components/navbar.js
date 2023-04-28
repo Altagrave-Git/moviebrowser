@@ -1,6 +1,14 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
-const Navbar = () => {
+const Navbar = ({ searchQuery, setSearchQuery }) => {
+
+  const navigate = useNavigate();
+
+  const updateSearchQuery = (e) => {
+    navigate("/search");
+    setSearchQuery(e.target.value);
+  }
+
   return (
     <nav className="navbar navbar-expand-lg bg-white-50">
       <div className="container-fluid">
@@ -47,7 +55,8 @@ const Navbar = () => {
               className="form-control me-2"
               type="search"
               placeholder="Search"
-              aria-label="Search"
+              value={searchQuery}
+              onChange={ updateSearchQuery }
             />
             <button className="btn btn-outline-success" type="submit">
               Search
