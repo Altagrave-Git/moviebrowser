@@ -1,12 +1,11 @@
-const Hero = ({ text }) => {
+const Hero = ({ text, backdrop }) => {
   return (
-    <div className="md:flex rounded-lg bg-dark p-24 justify-center">
-      {/* no img */}
-      {/* just text prop styled as a large, light-colored title */}
-      <div className="text-center">
-        <h1 className="text-4xl text-light py-5">{text}</h1>
-      </div>
-    </div>
+    <header className="hero-container bg-dark text-light p-5">
+      <h1 className="hero-text text-center">{text}</h1>
+      { backdrop &&
+        <div className="hero-backdrop" style={{backgroundImage: `url(${backdrop})`}}></div>
+      }
+    </header>
   );
 };
 
