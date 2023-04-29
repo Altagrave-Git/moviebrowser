@@ -5,9 +5,11 @@ import Navbar from "./components/navbar";
 import HomeView from "./components/home";
 import AboutView from "./components/about";
 import SearchView from "./components/search";
+import MovieView from "./components/movie";
 
 // TMDB API KEY = 5f20273fd7bb65b5bb1dd8450bf11dd1
 // EXAMPLE REQUEST = https://api.themoviedb.org/3/movie/550?api_key=5f20273fd7bb65b5bb1dd8450bf11dd1
+// TODO: 404 page, no image/backdrop, no results, search button
 
 function App() {
 
@@ -27,6 +29,7 @@ function App() {
         <Route path="/" element={<HomeView />} />
         <Route path="/about" element={<AboutView />} />
         <Route path="/search" element={<SearchView keyword={searchQuery} searchResults={searchResults} />} />
+        <Route path="/movies/:id" element={<MovieView />} />
       </Routes>
     </BrowserRouter>
   );
