@@ -1,5 +1,5 @@
 import Hero from './hero';
-import MovieCard from "./movie";
+import MovieCard from "./moviecard";
 
 const SearchView = ({ keyword, searchResults }) => {
   const title = `Results for: ${keyword}`;
